@@ -234,7 +234,7 @@ gulp.task('pagespeed', (cb) =>
 
 // Copy over the scripts that are used in importScripts as part of the generate-service-worker task.
 gulp.task('copy-workbox', () => {
-  return gulp.src(['node_modules/workbox-sw/build/importScripts/workbox-sw.prod.v2.0.3.js'])
+  return gulp.src(['node_modules/workbox-sw/build/importScripts/workbox-sw.prod.*.js'])
     .pipe($.rename('workbox.js'))
     .pipe(gulp.dest('dist/scripts/service-worker'));
 });
